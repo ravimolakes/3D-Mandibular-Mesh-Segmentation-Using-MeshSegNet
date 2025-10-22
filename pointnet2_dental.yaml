@@ -1,0 +1,28 @@
+# ✅ PointNet2 Config for Dental Mesh Segmentation
+
+model_name: pointnet2
+task: segmentation
+dataloader:
+  batch_size: 1
+  shuffle: True
+
+model:
+  architecture: pointnet2
+  conv_type: "DENSE"
+  input_nc: 3          # 🧠 Input: XYZ only (3 features)
+  output_nc: 3         # 🏷️ Output: 3 classes
+  use_category: False
+
+dataset:
+  task: segmentation
+  class_weight: [1.0, 4.0, 4.0]  # Optional: give more weight to smaller classes
+  ignore_label: -1              # Optional: if you have unlabeled points
+
+trainer:
+  max_epochs: 20
+  lr: 0.001
+  optimizer: adam
+  loss: cross_entropy  # or dice, or your combined custom loss if coded
+
+wandb:
+  use: False

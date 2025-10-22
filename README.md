@@ -39,16 +39,13 @@ mesh-mandibular-segmentator/
 ├── DentalSegDataset/           # Raw dataset
 │   ├── imagesTr/              # STL mesh files
 │   ├── labelTr/               # PLY labeled files
-│   └── Labeled PLY images/    # Additional labeled data
-├── converted/                 # Converted NRRD files
-│   ├── imagesTr/
-│   └── labelTr/
+│   └── imagesTs/              # ASTL mesh files
+│   
 ├── pointclouds/               # Generated point cloud data
 ├── *.ipynb                    # Jupyter notebooks for each model
 ├── *.yaml                     # Model configuration files
 ├── *.pth                      # Trained model weights
-├── *.json                     # Training metrics
-└── *.pdf                      # Research report
+└── *.json                     # Training metrics
 ```
 
 ## 🚀 Quick Start
