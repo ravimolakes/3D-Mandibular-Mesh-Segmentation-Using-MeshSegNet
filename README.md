@@ -77,12 +77,6 @@ cd mesh-mandibular-segmentator
 pip install -r requirements.txt
 ```
 
-3. **Prepare dataset**
-```bash
-# Convert STL meshes to point clouds (run once)
-python prepare_dataset.py
-```
-
 ### Training Models
 
 #### MeshSegNet Training
